@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prompt Enhancer"
+  short_description: "Turn raw prompts into clearer AI-ready requests."
+  default_prompt: "Use $prompt-enhancer to rewrite my rough request into a stronger prompt, show the optimized prompt first, and route to a better available skill automatically when one fits."
+
+policy:
+  allow_implicit_invocation: false
