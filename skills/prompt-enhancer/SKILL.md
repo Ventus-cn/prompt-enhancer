@@ -7,8 +7,10 @@ description: Transform rough user input into a clearer, more structured prompt b
 
 ## Overview
 
-Rewrite the user's raw request into a stronger prompt, show that optimized prompt to the user, then answer from that rewritten prompt.
-When another currently available skill is a clearer fit for the underlying task, use prompt enhancement as the front layer and then hand off execution to that skill.
+Rewrite the user's raw request into a stronger prompt, show that optimized prompt to the user, and then continue from that rewritten prompt.
+
+When another currently available skill is a clearer fit for the real task, use prompt enhancement as the front layer and then hand off execution to that skill.
+
 Improve clarity, structure, constraints, and output shape without forcing the user to write a polished prompt themselves.
 
 ## Core Rules
@@ -19,11 +21,11 @@ Do not claim that the input box or send action was technically intercepted or mo
 
 Default to showing the rewritten prompt first. Treat prompt display as part of the normal workflow, not a debug-only path.
 
-Follow the user's language. If the user writes in Chinese, keep the internal prompt and response strategy in Chinese. If the user writes in English, keep them in English unless the user asks otherwise.
+Follow the user's language. If the user writes in Chinese, keep the rewritten prompt and response strategy in Chinese. If the user writes in English, keep them in English unless the user asks otherwise.
 
-Preserve the user's intent. Improve the request without changing the actual task, audience, or desired outcome.
+Preserve the user's intent. Improve the request without changing the real task, audience, or desired outcome.
 
-Only route to skills that are explicitly available in the current session. Do not assume a skill can be used just because it exists somewhere on disk.
+Only route to skills that are explicitly available in the current session. Do not assume a skill can be used just because it exists on disk.
 
 ## Workflow
 
@@ -41,7 +43,7 @@ Only route to skills that are explicitly available in the current session. Do no
 3. If no class is clearly dominant, fall back to the general enhancement template in `references/general-template.md`.
 4. Rewrite the request into a structured prompt using the chosen template.
 5. Check the current session's available skill list and decide whether another skill is a clearly better fit for the user's actual task.
-6. Show the rewritten prompt to the user under a short label such as `Optimized Prompt` or `优化后的提示词`.
+6. Show the rewritten prompt to the user under a short label such as `Optimized Prompt` or `Optimized Request`.
 7. If a better-matched skill is available, invoke it immediately and pass the rewritten prompt or its intent into that skill's workflow.
 8. If no better-matched skill is available, answer the user's request from the rewritten prompt immediately after showing it.
 
@@ -71,7 +73,7 @@ When routing:
 When not routing:
 
 - continue normally inside `prompt-enhancer`
-- do not mention unrelated skills
+- do not mention irrelevant skills
 
 ## Rewrite Standard
 

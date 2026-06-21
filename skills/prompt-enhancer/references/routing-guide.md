@@ -6,7 +6,7 @@ Use this guide to classify the user's request before rewriting it.
 
 ### 1. Writing and Expression
 
-Choose this when the user wants copy, rewriting, polishing, messaging, narrative, speech, post, caption, or explanation quality improvements.
+Choose this when the user wants copy, rewriting, polishing, messaging, narrative, speech, post, caption, or explanation-quality improvements.
 
 Focus the rewritten prompt on:
 
@@ -18,7 +18,7 @@ Focus the rewritten prompt on:
 
 Example:
 
-- Raw request: `帮我润色这段自我介绍`
+- Raw request: `Help me polish this self-introduction.`
 - Route: writing and expression
 
 ### 2. Analysis and Summarization
@@ -35,7 +35,7 @@ Focus the rewritten prompt on:
 
 Example:
 
-- Raw request: `帮我分析这段会议纪要的重点`
+- Raw request: `Help me analyze the key points in these meeting notes.`
 - Route: analysis and summarization
 
 ### 3. Planning and Strategy
@@ -52,7 +52,7 @@ Focus the rewritten prompt on:
 
 Example:
 
-- Raw request: `帮我做一个新产品上线方案`
+- Raw request: `Help me create a launch plan for a new product.`
 - Route: planning and strategy
 
 ### 4. Coding Help
@@ -69,7 +69,7 @@ Focus the rewritten prompt on:
 
 Example:
 
-- Raw request: `帮我修这个 Python 报错`
+- Raw request: `Help me fix this Python error.`
 - Route: coding help
 
 ## Fallback Rule

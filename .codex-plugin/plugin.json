@@ -1,0 +1,25 @@
+{
+  "name": "prompt-enhancer",
+  "version": "0.1.0",
+  "description": "Prompt enhancement and skill-routing plugin for Codex.",
+  "author": {
+    "name": "Xuwentao"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Prompt Enhancer",
+    "shortDescription": "Upgrade rough prompts before execution.",
+    "longDescription": "Prompt Enhancer rewrites rough requests into stronger prompts and can route execution to a better available skill in the current session.",
+    "developerName": "Xuwentao",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Prompt Enhancer to rewrite my rough request before acting on it.",
+      "Use Prompt Enhancer and route to a better skill if one already fits.",
+      "Show the optimized prompt first, then continue the task."
+    ]
+  }
+}
